@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crest & Crown - Unisex Luxury Salon</title>
+
+    
+    <link rel="stylesheet" href="./salon.css">
+</head>
+<body>
+
+    
+    <input type="checkbox" id="nav-toggle" class="hidden-toggle">
+    <input type="checkbox" id="view-gents-full" class="hidden-toggle">
+    <input type="checkbox" id="view-ladies-full" class="hidden-toggle">
+
+    <!--NavBar-->
+    <header class="navbar">
+
+        <div class="logo">
+            <img src="./logo.png" alt="Crest & Crown">
+        </div>
+
+        <!-- Hamburger icon, only show on mobile. -->
+        <label for="nav-toggle" class="hamburger">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav id="mainNav">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+
+            <!-- Service DropDown -->
+            <div class="service-menu-wrapper">
+
+                
+                <div class="service-btn">
+                    Services <span>▾</span>
+                </div>
+
+                <div class="service-overlay" id="serviceOverlay">
+
+                    <!-- STEP 1: choose Gents or Ladies -->
+                    <div class="gender-select">
+
+                        <div class="gender-block">
+                            <h4>🧔 Gents</h4>
+                            <a href="#gents-signature" class="gender-link">Signature Services</a>
+                            <label for="view-gents-full" class="gender-link">Full Menu</label>
+                        </div>
+
+                        <div class="gender-block">
+                            <h4>💇‍♀️ Ladies</h4>
+                            <a href="#ladies-signature" class="gender-link">Signature Services</a>
+                            <label for="view-ladies-full" class="gender-link">Full Menu</label>
+                        </div>
+
+                    </div>
+
+                    <!--  Gents Full Menu  (simple list, no sub-tabs) -->
+                    <div class="fullmenu-panel fullmenu-gents">
+                        <label for="view-gents-full" class="fullmenu-back">← Back</label>
+                        <h3>Gents — Full Menu</h3>
+                        <div class="service-grid">
+                            <div class="service-item"><h4>Bridal Facial</h4></div>
+                            <div class="service-item"><h4>Bridal Makeup</h4></div>
+                            <div class="service-item"><h4>Hydra Facial</h4></div>
+                            <div class="service-item"><h4>Keratin</h4></div>
+                            <div class="service-item"><h4>Smoothening</h4></div>
+                            <div class="service-item"><h4>Harling</h4></div>
+                            <div class="service-item"><h4>Hair Highlight Colour</h4></div>
+                            <div class="service-item"><h4>Manicure & Pedicure</h4></div>
+                            <div class="service-item"><h4>Hair Designing</h4></div>
+                        </div>
+                    </div>
+
+                    <!-- Ladies Full Menu (has category tabs on the left) -->
+                    <div class="fullmenu-panel fullmenu-ladies">
+                        <label for="view-ladies-full" class="fullmenu-back">← Back</label>
+
+                        <!-- These radio buttons decide categeries tab is open -->
+                        <input type="radio" name="ladies-tab" id="lt-qt" class="tab-radio" checked>
+                        <input type="radio" name="ladies-tab" id="lt-ht" class="tab-radio">
+                        <input type="radio" name="ladies-tab" id="lt-sc" class="tab-radio">
+                        <input type="radio" name="ladies-tab" id="lt-ao" class="tab-radio">
+                        <input type="radio" name="ladies-tab" id="lt-bl" class="tab-radio">
+                        <input type="radio" name="ladies-tab" id="lt-dt" class="tab-radio">
+                        <input type="radio" name="ladies-tab" id="lt-mo" class="tab-radio">
+                        <input type="radio" name="ladies-tab" id="lt-bm" class="tab-radio">
+                        <input type="radio" name="ladies-tab" id="lt-oc" class="tab-radio">
+
+                        <div class="tab-sidebar">
+                            <label for="lt-qt" class="service-category">Quick Therapy</label>
+                            <label for="lt-ht" class="service-category">Hair Treatments</label>
+                            <label for="lt-sc" class="service-category">Skin Care</label>
+                            <label for="lt-ao" class="service-category">Add On</label>
+                            <label for="lt-bl" class="service-category">Bleach</label>
+                            <label for="lt-dt" class="service-category">De-Tan</label>
+                            <label for="lt-mo" class="service-category">Make Over / Groom</label>
+                            <label for="lt-bm" class="service-category">Bridal Mehndi</label>
+                            <label for="lt-oc" class="service-category">Outdoor Charges Extra</label>
+                        </div>
+
+                        <!-- QUICK THERAPY -->
+                        <div class="tab-content" id="content-lt-qt">
+                            <h3>Quick Therapy</h3>
+                            <h5>Head Massage</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Head Massage 1</h4></div>
+                                <div class="service-item"><h4>Head Massage 2</h4></div>
+                                <div class="service-item"><h4>Head Massage 3</h4></div>
+                                <div class="service-item"><h4>Head Massage 4</h4></div>
+                                <div class="service-item"><h4>Head Massage 5</h4></div>
+                            </div>
+                            <h5>Easy Relax</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Easy Relax 1</h4></div>
+                                <div class="service-item"><h4>Easy Relax 2</h4></div>
+                                <div class="service-item"><h4>Easy Relax 3</h4></div>
+                                <div class="service-item"><h4>Easy Relax 4</h4></div>
+                            </div>
+                        </div>
+
+                        <!-- HAIR TREATMENTS -->
+                        <div class="tab-content" id="content-lt-ht">
+                            <h3>Hair Treatments</h3>
+                            <h5>Hair Spa Treatments</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Hair Spa 1</h4></div>
+                                <div class="service-item"><h4>Hair Spa 2</h4></div>
+                                <div class="service-item"><h4>Hair Spa 3</h4></div>
+                                <div class="service-item"><h4>Hair Spa 4</h4></div>
+                            </div>
+                            <h5>Scalp Treatments</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Scalp Treatment 1</h4></div>
+                                <div class="service-item"><h4>Scalp Treatment 2</h4></div>
+                            </div>
+                            <h5>Texture</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Texture 1</h4></div>
+                                <div class="service-item"><h4>Texture 2</h4></div>
+                                <div class="service-item"><h4>Texture 3</h4></div>
+                            </div>
+                        </div>
+
+                        <!-- SKIN CARE -->
+                        <div class="tab-content" id="content-lt-sc">
+                            <h3>Skin Care</h3>
+                            <h5>Facials</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Facial 1</h4></div>
+                                <div class="service-item"><h4>Facial 2</h4></div>
+                                <div class="service-item"><h4>Facial 3</h4></div>
+                                <div class="service-item"><h4>Facial 4</h4></div>
+                                <div class="service-item"><h4>Facial 5</h4></div>
+                                <div class="service-item"><h4>Facial 6</h4></div>
+                                <div class="service-item"><h4>Facial 7</h4></div>
+                                <div class="service-item"><h4>Facial 8</h4></div>
+                                <div class="service-item"><h4>Facial 9</h4></div>
+                                <div class="service-item"><h4>Facial 10</h4></div>
+                                <div class="service-item"><h4>Facial 11</h4></div>
+                                <div class="service-item"><h4>Facial 12</h4></div>
+                            </div>
+                        </div>
+
+                        <!-- ADD ON -->
+                        <div class="tab-content" id="content-lt-ao">
+                            <h3>Add On</h3>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Add On 1</h4></div>
+                                <div class="service-item"><h4>Add On 2</h4></div>
+                                <div class="service-item"><h4>Add On 3</h4></div>
+                            </div>
+                        </div>
+
+                        <!-- BLEACH -->
+                        <div class="tab-content" id="content-lt-bl">
+                            <h3>Bleach</h3>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Bleach 1</h4></div>
+                                <div class="service-item"><h4>Bleach 2</h4></div>
+                                <div class="service-item"><h4>Bleach 3</h4></div>
+                                <div class="service-item"><h4>Bleach 4</h4></div>
+                            </div>
+                        </div>
+
+                        <!-- DE-TAN -->
+                        <div class="tab-content" id="content-lt-dt">
+                            <h3>De-Tan</h3>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>De-Tan 1</h4></div>
+                                <div class="service-item"><h4>De-Tan 2</h4></div>
+                            </div>
+                        </div>
+
+                        <!-- MAKE OVER / GROOM -->
+                        <div class="tab-content" id="content-lt-mo">
+                            <h3>Make Over / Groom</h3>
+                            <h5>Wedding / Reception</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Wedding / Reception 1</h4></div>
+                                <div class="service-item"><h4>Wedding / Reception 2</h4></div>
+                            </div>
+                            <h5>Trial</h5>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>HD MAC</h4><span class="price-tag">₹1,499</span></div>
+                                <div class="service-item"><h4>HD MAC</h4><span class="price-tag">₹1,999</span></div>
+                            </div>
+                        </div>
+
+                        <!-- BRIDAL MEHNDI -->
+                        <div class="tab-content" id="content-lt-bm">
+                            <h3>Bridal Mehndi</h3>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Bridal Mehndi 1</h4></div>
+                                <div class="service-item"><h4>Bridal Mehndi 2</h4></div>
+                                <div class="service-item"><h4>Bridal Mehndi 3</h4></div>
+                                <div class="service-item"><h4>Bridal Mehndi 4</h4></div>
+                                <div class="service-item"><h4>Bridal Mehndi 5</h4></div>
+                            </div>
+                        </div>
+
+                        <!-- OUTDOOR CHARGES -->
+                        <div class="tab-content" id="content-lt-oc">
+                            <h3>Outdoor Charges Extra</h3>
+                            <div class="service-grid">
+                                <div class="service-item"><h4>Hydra Facial (Starts from)</h4><span class="price-tag">₹3,999</span></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end Ladies Full Menu -->
+
+                </div>
+            </div>
+            <!-- end Services dropdown -->
+
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#booking" class="book-Appointment-btn">Book Appointment</a>
+    </header>
+    <!-- Nav Bar End-->
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-subtitle">WELCOME TO BEAUTÉ</p>
+            <h1>
+                Where Every Crown is Crafted to Perfection<br>
+                Meets <span>Elegance</span>
+            </h1>
+            <p class="hero-description">
+                Luxury grooming and styling for him and
+                her — because royalty has no gender.
+            </p>
+            <div class="hero-buttons">
+                <a href="#booking" class="primary-btn">Book Appointment</a>
+                <a href="#services" class="secondary-btn">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="./Hero Section Images.png" alt="Beauty Salon">
+        </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="./Abot images.jpg" alt="Beauty Salon">
+            <div class="experience-box">
+                <strong>10+</strong>
+                <span>Years of<br>Experience</span>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <p class="about-subtitle">ABOUT BEAUTÉ &amp;</br> CREST CROWN</p>
+            <h2>
+                Beauty is not just<br>
+                a look, it's an <span>experience.</span>
+            </h2>
+            <p class="about-text">
+                At Beauté, we believe every individual deserves to feel
+                confident, beautiful, and cared for. Our salon combines
+                modern techniques, premium products, and personalized
+                attention to create a truly luxurious beauty experience.
+            </p>
+            <p class="about-text">
+                From professional hair styling to beauty treatments,
+                our experienced team is dedicated to bringing out
+                your natural beauty.
+            </p>
+            <div class="about-features">
+                <div class="feature">
+                    <div class="feature-icon">✦</div>
+                    <div>
+                        <h4>Expert Stylists</h4>
+                        <p>Professionally trained team</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✦</div>
+                    <div>
+                        <h4>Premium Products</h4>
+                        <p>Quality products &amp; care</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="about-btn">Discover More</a>
+        </div>
+    </section>
+    <!-- About End  -->
+
+    <!--  Gents Signatures service -->
+    <section class="featured-section" id="gents-signature">
+        <h1>🧔 Gents — Signature Services</h1>
+        <div class="services-container">
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Bridal Facial Men img1.avif" alt="Bridal Facial">
+                </div>
+                <div class="service-info">
+                    <h2>Bridal Facial</h2>
+                    <p>Radiant Glow for Your Big Day</p>
+                    <p>A luxurious facial treatment designed to brighten, hydrate, and perfect your skin — leaving you flawless and camera-ready for your special day.</p>
+                    <div class="rating">⭐ 4.8 <span>(214 Reviews)</span></div>
+                    <div class="price">Price: <strong>₹299</strong></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card featured-card">
+                <div class="image-area">
+                    <span class="badge new">✨ New</span>
+                    <img src="./Bridal Makeup Men  img 3.jpg" alt="Bridal Makeup">
+                </div>
+                <div class="service-info">
+                    <h2>Bridal Makeup</h2>
+                    <p>Flawless Looks for Your Special Day</p>
+                    <p>Professional makeup artistry crafted to enhance your natural beauty and make every moment picture-perfect.</p>
+                    <div class="rating">⭐ 4.7 <span>(168 Reviews)</span></div>
+                    <div class="price">Price: <strong>₹799</strong></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge trending">♥ Trending</span>
+                    <img src="./Bridal Facila img 2.jpg" alt="Hydra Facial">
+                </div>
+                <div class="service-info">
+                    <h2>Hydra Facial</h2>
+                    <p>Deep Hydration, Instant Glow</p>
+                    <p>Advanced hydrating facial that cleanses, exfoliates, and nourishes for visibly refreshed, glowing skin.</p>
+                    <div class="rating">⭐ 4.6 <span>(214 Reviews)</span></div>
+                    <div class="price">Price: <strong>₹1,099</strong></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Keratin Men img 4.avif" alt="Keratin">
+                </div>
+                <div class="service-info">
+                    <h2>Keratin</h2>
+                    <p>Silky Smooth, Frizz-Free Hair</p>
+                    <p>A deep-nourishing keratin treatment that leaves hair smooth, shiny, and manageable for months.</p>
+                    <div class="rating">⭐ 4.8 <span>(214 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹2,499</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Smoothening Men img 5.avif" alt="Smoothening">
+                </div>
+                <div class="service-info">
+                    <h2>Smoothening</h2>
+                    <p>Sleek, Salon-Straight Finish</p>
+                    <p>Tames frizz and adds a soft, natural shine — perfect for effortless everyday styling.</p>
+                    <div class="rating">⭐ 4.8 <span>(28 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Hair Highlight Colour  Men Img 7.webp" alt="Hair Highlight Colour">
+                </div>
+                <div class="service-info">
+                    <h2>Hair Highlight Colour</h2>
+                    <p>Dimension &amp; Shine, Your Way</p>
+                    <p>Expertly placed highlights that add depth, brightness, and a modern touch to your hair.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹249</strong> <p>(Per streak)</p></div>
+                    <div class="price-long">Price: <strong>₹1,299</strong> <p>(Full highlights)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Manicure & Pedicure men img 8.jpg" alt="Manicure & Pedicure">
+                </div>
+                <div class="service-info">
+                    <h2>Manicure &amp; Pedicure</h2>
+                    <p>Polished Hands, Pampered Feet</p>
+                    <p>A relaxing nail and skin care ritual leaving your hands and feet clean, soft, and beautifully finished.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Hair Designing img 9.webp" alt="Hair Designing">
+                </div>
+                <div class="service-info">
+                    <h2>Hair Designing</h2>
+                    <p>Cut &amp; Styled to Perfection</p>
+                    <p>Precision haircuts and creative styling changes tailored to match your personality and face shape.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹149</strong> <p>(Hair Cut)</p></div>
+                    <div class="price-long">Price: <strong>₹69</strong> <p>(Change of Hair Style)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Harling men im.webp" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Gents Section End-->
+
+    <!-- Ladies Signature Service -->
+    <section class="featured-section" id="ladies-signature">
+        <h1>💇‍♀️ Ladies — Signature Services</h1>
+        <div class="services-container">
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="" alt="Bridal Facial">
+                </div>
+                <div class="service-info">
+                    <h2>Bridal Facial</h2>
+                    <p>Radiant Glow for Your Big Day</p>
+                    <p>A luxurious facial treatment designed to brighten, hydrate, and perfect your skin — leaving you flawless and camera-ready for your special day.</p>
+                    <div class="rating">⭐ 4.8 <span>(214 Reviews)</span></div>
+                    <div class="price">Price: <strong>₹299</strong></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Harling men im.webp" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Harling men im.webp" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Harling men im.webp" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Harling men im.webp" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Harling men im.webp" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area">
+                    <span class="badge">🔥 Best Seller</span>
+                    <img src="./Harling men im.webp" alt="Harling">
+                </div>
+                <div class="service-info">
+                    <h2>Harling</h2>
+                    <p>Signature Styling Technique</p>
+                    <p>A specialized styling treatment crafted for a distinct, salon-perfect finish.</p>
+                    <div class="rating">⭐ 4.8 <span>(268 Reviews)</span></div>
+                    <div class="price-regular">Price: <strong>₹1,499</strong> <p>(Regular)</p></div>
+                    <div class="price-long">Price: <strong>₹1,999</strong> <p>(Long)</p></div>
+                    <div class="bottom-row">
+                        <button class="book-btn">Book Now</button>
+                        <button class="heart-btn">♡</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area"><span class="badge">✨ Popular</span><img src="./ladies-bridalfacial.jpg" alt="Bridal Facial"></div>
+                <div class="service-info">
+                    <h2>Bridal Facial</h2>
+                    <p>Radiant glow crafted for your big day.</p>
+                    <div class="price">Price: <strong>On Request</strong></div>
+                    <div class="bottom-row"><button class="book-btn">Book Now</button><button class="heart-btn">♡</button></div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area"><span class="badge">✨ Popular</span><img src="./ladies-hairspa.jpg" alt="Hair Spa"></div>
+                <div class="service-info">
+                    <h2>Hair Spa</h2>
+                    <p>Deep nourishment for stronger, healthier hair.</p>
+                    <div class="price">Price: <strong>₹999</strong></div>
+                    <div class="bottom-row"><button class="book-btn">Book Now</button><button class="heart-btn">♡</button></div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area"><span class="badge">✨ Popular</span><img src="./ladies-scalp.jpg" alt="Scalp Treatment"></div>
+                <div class="service-info">
+                    <h2>Scalp Treatment</h2>
+                    <p>Restores scalp health for stronger hair growth.</p>
+                    <div class="price">Price: <strong>₹1,199</strong></div>
+                    <div class="bottom-row"><button class="book-btn">Book Now</button><button class="heart-btn">♡</button></div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area"><span class="badge">✨ Popular</span><img src="./ladies-bleach.jpg" alt="Bleach"></div>
+                <div class="service-info">
+                    <h2>Bleach</h2>
+                    <p>Even-toned, brighter skin instantly.</p>
+                    <div class="price">Price: <strong>₹499</strong></div>
+                    <div class="bottom-row"><button class="book-btn">Book Now</button><button class="heart-btn">♡</button></div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area"><span class="badge">✨ Popular</span><img src="./ladies-detan.jpg" alt="De-Tan"></div>
+                <div class="service-info">
+                    <h2>De-Tan</h2>
+                    <p>Removes tan for fresher, brighter skin.</p>
+                    <div class="price">Price: <strong>₹599</strong></div>
+                    <div class="bottom-row"><button class="book-btn">Book Now</button><button class="heart-btn">♡</button></div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area"><span class="badge">✨ Popular</span><img src="./ladies-mehndi.jpg" alt="Bridal Mehndi"></div>
+                <div class="service-info">
+                    <h2>Bridal Mehndi</h2>
+                    <p>Intricate, elegant designs for your special day.</p>
+                    <div class="price">Price: <strong>On Request</strong></div>
+                    <div class="bottom-row"><button class="book-btn">Book Now</button><button class="heart-btn">♡</button></div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-area"><span class="badge">✨ Popular</span><img src="./ladies-headmassage.jpg" alt="Head Massage"></div>
+                <div class="service-info">
+                    <h2>Head Massage</h2>
+                    <p>Relaxing therapy to relieve stress and tension.</p>
+                    <div class="price">Price: <strong>₹399</strong></div>
+                    <div class="bottom-row"><button class="book-btn">Book Now</button><button class="heart-btn">♡</button></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Ladies Section End  -->
+ 
+
+
+    <!-- Booking Section  -->
+
+    <section class="booking"
+             id="booking">
+
+
+        <div class="booking-content">
+
+
+            <p class="section-label">
+                BOOK APPOINTMENT
+            </p>
+
+
+            <h2>
+                Ready for Your
+                New Look?
+            </h2>
+
+
+            <p>
+                Choose your service and
+                book your appointment.
+            </p>
+
+
+            <!-- Booking Form -->
+
+            <form>
+
+
+                <input type="text"
+                       placeholder="Your Name"
+                       required>
+
+
+                <input type="tel"
+                       placeholder="Phone Number"
+                       required>
+
+
+                <select required>
+
+                    <option value="">
+                        Select Service
+                    </option>
+
+                    <option>
+                        Gents Hair Care
+                    </option>
+
+                    <option>
+                        Ladies Hair Care
+                    </option>
+
+                    <option>
+                        Hair Treatment
+                    </option>
+
+                    <option>
+                        Skin Care
+                    </option>
+
+                    <option>
+                        Bridal Makeup
+                    </option>
+
+                </select>
+
+
+                <input type="date"
+                       required>
+
+
+                <input type="time"
+                       required>
+
+
+                <button type="submit"
+                        class="primary-btn">
+
+                    Book Appointment
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+    <!-- Booking Section End -->
+
+
+
+    <!-- Contect Section Start-->
+
+    <section class="contact"
+             id="contact">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                CONTACT US
+            </p>
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                Visit us or contact us for
+                your next appointment.
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <!-- Location -->
+
+            <div class="contact-box">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Our Location
+                </h3>
+
+                <p>
+                    Your Salon Address<br>
+                    Chennai, Tamil Nadu
+                </p>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="contact-box">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+            </div>
+
+
+            <!-- E-mail-->
+
+            <div class="contact-box">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <h3>
+                    Email Us
+                </h3>
+
+                <p>
+                    hello@crestandcrown.com
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <!-- Contect Section End -->
+
+
+
+    <!--
+         Footer Section Start
+         Website-ன் last section -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            CREST & CROWN
+
+        </div>
+
+
+        <p>
+            Unisex Luxury Salon
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+
+            © 2026 Crest & Crown.
+            All Rights Reserved.
+
+        </p>
+
+
+    </footer>
+
+    <!-- Footer End -->
+</body>
+</html>
